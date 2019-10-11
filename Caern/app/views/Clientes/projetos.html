@@ -1,0 +1,22 @@
+#{extends 'main.html' /} #{set title:'Home' /}
+
+<h1>Cadastro de projetos</h1>
+<h4>Cliente: ${cliente.nome}</h4>
+
+<form action="@{Clientes.associarProjeto}">
+	<input type="hidden" name="id" value="${cliente.id}" /> <select
+		name="idProjeto"> #{list items:projetos, as:'p'}
+		<option value="${p.id}">${p.nome}</option> #{/list} #{else}
+		<option>Nenhum projeto</option> #{/else}
+	</select> <input type="submit" value="Associar" />
+</form>
+
+<hr />
+<h4>Projetos do cliente:</h4>
+<ul>
+	#{list items:cliente.projetos, as:'p'}
+	<li>${p.nome} <a
+		href="@{Clientes.removerProjeto(cliente.id, p.id)}">Remover</a>
+	</li> #{/list} #{else}
+	<li>Nenhum projeto associado</li> #{/else}
+</ul>

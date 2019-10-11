@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<form class="form-inline" action="@{Clientes.salvarOcorrencia}">
+
+	<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Ocorrencia</label>
+	<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="idOcorrencia">
+
+		#{list items:ocorrencias, as:'o'}
+			<option value="${o.id}">${o.descricao}</option>	
+		#{/list}
+	</select>
+	<input type="hidden" value="${cliente.id}" name="idCliente">
+	<br />
+
+	<button class="btn btn-secondary btn-lg" >Enviar</button>
+
+	
+	
+	

@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Login' /}
+
+<!-- <form action="@{Logins.logar}"> -->
+<!-- 	<input type="text" name="login" placeholder="login" /><br /> -->
+<!-- 	<input type="password" name="senha" placeholder="senha" /><br /> -->
+<!-- 	<input type="submit" value="Logar" /> -->
+<!-- </form> -->
+
+<form action="@{Logins.logar}">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="login" class="form-control" placeholder="login">
+    </div>
+    <div class="col">
+      <input type="password" name="senha" class="form-control" placeholder="senha">
+    </div>
+  </div>
+  <br/>
+   <button type="submit" class="btn btn-primary">Logar</button>
+</form>

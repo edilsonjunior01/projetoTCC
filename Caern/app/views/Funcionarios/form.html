@@ -1,0 +1,16 @@
+#{extends 'main.html' /} #{set title:'Home' /}
+
+<form action="@{Clientes.salvar}">
+
+
+	<label>Nome</label> <input type="text" name="f.nome" class="form-control" 
+		placeholder="Nome..." /><br /> 
+		
+	<label>Matricula</label> <input type="text" name="f.matricula" class="form-control"
+		placeholder="Matricula..." /><br />
+
+
+	<button class="btn btn-secondary btn-lg">Enviar</button>
+
+</form>
+

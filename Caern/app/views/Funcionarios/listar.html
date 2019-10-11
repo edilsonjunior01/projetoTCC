@@ -1,0 +1,9 @@
+#{extends 'main.html' /} #{set title:'Home' /}
+
+<ul>
+	#{list items:meusFuncionarios, as:'f'}
+
+	<li>${f.nome} - ${f.matricula}
+	 <a href="@{funcionarios.remover(f.id)}">Remover</a>
+	</li> #{/list}
+</ul>
