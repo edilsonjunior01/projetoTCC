@@ -46,6 +46,11 @@ public class Clientes extends Controller {
 		listar();
 	}
 
+	public static void editar(long id) {
+		Cliente c = Cliente.findById(id);
+		renderTemplate("Clientes/form.html", c);
+	}
+	
 	public static void remover(Long id) {
 		Cliente cliente = Cliente.findById(id);
 		cliente.status = Status.INATIVO;

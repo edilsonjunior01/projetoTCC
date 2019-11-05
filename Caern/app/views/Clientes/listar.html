@@ -11,6 +11,7 @@
       <th scope="col">Endereco</th>
       <th scope="col">Ocorrencia</th>
       <th scope="col">Remover</th>
+      <th scope="col">Editar Dados</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,8 @@
 <a href="@{Clientes.registrarOcorrencia(c.id)}">Ocorrencia</a></button></td>
       <td> <button type="button" class="btn btn-secondary btn-sm">
 <a href="@{Clientes.remover(c.id)}">Remover</a></button>
+ <td> <button type="button" class="btn btn-secondary btn-sm">
+<a href="@{Clientes.editar(c.id)}">Editar Dados</a></button>
 </td>
  
    
